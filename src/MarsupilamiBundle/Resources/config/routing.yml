@@ -13,3 +13,11 @@ marsupilami_add:
 marsupilami_remove:
     path:     /remove
     defaults: { _controller: MarsupilamiBundle:Marsupilami:remove }
+    
+marsupilami_search:
+    path:     /search
+    defaults: { _controller: MarsupilamiBundle:Marsupilami:search }
+    
+marsupilami_invit:
+    path:     /invit
+    defaults: { _controller: MarsupilamiBundle:Marsupilami:invit }

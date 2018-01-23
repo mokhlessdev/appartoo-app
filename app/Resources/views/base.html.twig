@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" />
         <link rel="stylesheet" href="{{asset('assets/font-awesome/4.5.0/css/font-awesome.min.css')}}" />
 
+        
+        
         <!-- page specific plugin styles -->
         <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.custom.min.css')}}" />
         <link rel="stylesheet" href="{{asset('assets/css/jquery.gritter.min.css')}}" />
@@ -36,7 +38,11 @@
         <![endif]-->
 
         <!-- inline styles related to this page -->
+        <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
 
+         <!-- Bootstrap 3.3.7 -->
+    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+    
         <!-- ace settings handler -->
         <script src="{{asset('assets/js/ace-extra.min.js')}}"></script>
 
@@ -45,7 +51,12 @@
         <!--[if lte IE 8]>
         <script src="{{asset('assets/js/html5shiv.min.js')}}"></script>
         <script src="{{asset('assets/js/respond.min.js')}}"></script>
+        
+        
+        
         <![endif]-->
+        
+        
     </head>
     
             {% block body %}{% endblock %}

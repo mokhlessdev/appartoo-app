@@ -13,49 +13,49 @@
                     <span class="icon-bar"></span>
                 </button>
 
-              
 
-            {#    <div class="navbar-buttons navbar-header pull-right" role="navigation">
-                    <ul class="nav ace-nav">
 
-                        <li class="light-blue dropdown-modal">
-                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                <img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
-                                <span class="user-info">
-                                    <small>Welcome,</small>
-                                    Jason
-                                </span>
-
-                                <i class="ace-icon fa fa-caret-down"></i>
-                            </a>
-
-                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                                <li>
-                                    <a href="#">
-                                        <i class="ace-icon fa fa-cog"></i>
-                                        Settings
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="profile.html">
-                                        <i class="ace-icon fa fa-user"></i>
-                                        Profile
-                                    </a>
-                                </li>
-
-                                <li class="divider"></li>
-
-                                <li>
-                                    <a href="#">
-                                        <i class="ace-icon fa fa-power-off"></i>
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>#}
+                {#    <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                        <ul class="nav ace-nav">
+    
+                            <li class="light-blue dropdown-modal">
+                                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                    <img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+                                    <span class="user-info">
+                                        <small>Welcome,</small>
+                                        Jason
+                                    </span>
+    
+                                    <i class="ace-icon fa fa-caret-down"></i>
+                                </a>
+    
+                                <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-cog"></i>
+                                            Settings
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="profile.html">
+                                            <i class="ace-icon fa fa-user"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+    
+                                    <li class="divider"></li>
+    
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-power-off"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>#}
             </div><!-- /.navbar-container -->
         </div>
 
@@ -75,12 +75,12 @@
                     }
                 </script>
 
-             
+
             </div>
 
             <div class="main-content">
                 <div class="main-content-inner">
-                
+
 
                     <div class="page-content">
 
@@ -124,39 +124,26 @@
                                                     Profile
                                                 </a>
                                             </li>
-
-
-
                                             <li>
                                                 <a data-toggle="tab" href="{{path('fos_user_profile_edit')}}">
                                                     <i class="blue ace-icon fa fa-pencil  bigger-120"></i>
                                                     Modifier
                                                 </a>
                                             </li>
-
-
                                         </ul>
-
                                         <div class="tab-content no-border padding-24">
                                             <div id="home" class="tab-pane in active">
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-3 center">
                                                         <span class="profile-picture">
-                                                            <img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="{{asset('assets/images/avatars/profile-pic.jpg')}}" />
+                                                            <img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="{{asset('assets/images/avatars/marsupilami.jpg')}}" />
                                                         </span>
-
                                                         <div class="space space-4"></div>
-
-
                                                     </div><!-- /.col -->
-
                                                     <div class="col-xs-12 col-sm-9">
                                                         <h4 class="blue">
                                                             <span class="middle">{[{ user.username }]}</span>
-
-
                                                         </h4>
-
                                                         <div class="profile-user-info">
                                                             <div class="profile-info-row">
                                                                 <div class="profile-info-name"> Identifiant </div>
@@ -165,9 +152,6 @@
                                                                     <span>{[{ user.username }]}</span>
                                                                 </div>
                                                             </div>
-
-
-
                                                             <div class="profile-info-row">
                                                                 <div class="profile-info-name"> Age </div>
 
@@ -189,7 +173,6 @@
                                                                     <span>{[{ user.race }]}</span>
                                                                 </div>
                                                             </div>
-
                                                             <div class="profile-info-row">
                                                                 <div class="profile-info-name">Nourriture </div>
 
@@ -208,451 +191,282 @@
                                                             <div class="widget-header widget-header-small">
                                                                 <h4 class="widget-title smaller">
                                                                     <i class="ace-icon fa fa-users bigger-110"></i>
-                                                                    Friends
+                                                                    Mes amis
                                                                 </h4>
                                                             </div>
                                                             <div class="widget-body">
                                                                 <div class="widget-main">
-                                                                    <div class="col-md-6">
-                                                                        <select class="form-control" ng-model="new" >
-                                                                            <option value="{[{ x.id }]}" ng-repeat="(key,x) in users">{[{ x.username }]}</option>
-                                                                        </select>
-                                                                    </div> 
-                                                                    <div class="col-md-3">
-                                                                        <input type="button" ng-click="add()" class="btn btn-primary" value="Ajouter" name="Add">
+                                                                    <div class="row">
+                                                                    {#    <div class="col-md-6">
+                                                                            <select class="form-control" ng-model="new" >
+                                                                                <option value="{[{ x.id }]}" ng-repeat="(key,x) in users">{[{ x.username }]}</option>
+                                                                            </select>
+                                                                        </div> 
+                                                                        <div class="col-md-3">
+                                                                            <button  type="button" ng-click="add(new)" class="btn btn-" name="add"> <i class=" fa fa-plus bigger-150"></i> Ajouter</button>
+                                                                        </div>#}
+                                                                    
+                                                                     <div class="col-md-12">
+                                                                        <button  type="button" class="btn btn-primary" href="#addFriends" name="search" data-toggle="modal" accesskey="" > <i class=" fa fa-plus bigger-150"></i> Ajouter</button>
+                                                                        <button  type="button" class="btn btn-success" href="#searchFriends" name="search" data-toggle="modal" accesskey="" > <i class=" fa fa-search bigger-150"></i> Chercher</button>
+                                                                        <button  type="button" class="btn btn-info" href="#invit" name="search" data-toggle="modal" accesskey="" > <i class=" fa fa-envelope-o bigger-150"></i> Inviter</button>
+                                                                     </div>
+                                                                    
+                                                                        {#   <div class="col-md-6">
+                                                                            <input type="text" class="form-control" ng-model="invitation">
+                                                                        </div> 
+                                                                        <div class="col-md-3">
+                                                                            <button  type="button" ng-click="invit()" class="btn btn-info" name="search"> <i class=" fa fa-envelope-o bigger-150"></i> Inviter</button>
+                                                                        </div>#}
+                                                                    </div>
+
+                                                                    {#   <table id="dynamic-table table" class=" table-bordered table table-striped">
+                                                                           <thead>
+                                                                           <th>Username</th>
+                                                                           <th>Age</th>
+                                                                           <th>Famille</th>
+                                                                           <th>Race</th>
+                                                                           <th>Nourriture</th>
+                                                                           <th>Action</th>
+                                                                           </thead>
+                                                                           <tbody ng-repeat="(key, friend) in friends">
+                                                                               <tr>
+                                                                                   <td>{[{friend.username}]}</td>
+                                                                                   <td>{[{friend.age}]}</td>
+                                                                                   <td>{[{friend.famille }]}</td>
+                                                                                   <td>{[{friend.race}]}</td>
+                                                                                   <td>{[{friend.nourriture }]} </td>
+                                                                                   <td><button class="btn btn-danger" ng-click="remove(friend.id)">Remove</button></td>
+                                                                               </tr>
+                                                                               </body>
+                                                                       </table>#}
+
+
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+
+
+
+                                                                            <div id="friends" class="tab-pane active">
+                                                                                <div class="profile-users clearfix">
+                                                                                    <div class="itemdiv memberdiv" ng-repeat="(key, friend) in friends">
+                                                                                        <div class="inline pos-rel">
+                                                                                            <div class="user">
+                                                                                                <a href="#">
+                                                                                                    <img src="../assets/images/avatars/default_user.png" alt="Jim Doe's avatar">
+                                                                                                </a>
+                                                                                            </div>
+                                                                                            <div class="body">
+                                                                                                <div class="name">
+                                                                                                    <a href="#">
+                                                                                                        <span class="user-status status-busy"></span>
+                                                                                                        {[{friend.username}]}
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="popover right">
+                                                                                                <div class="arrow"></div>
+                                                                                                <div class="popover-content">
+                                                                                                    <b>Age</b>     {[{friend.age}]}<br>
+                                                                                                    <b>Famille</b> {[{friend.famille }]}<br>
+                                                                                                    <b>Race</b> {[{friend.race}]}<br>
+                                                                                                    <b>Nourriture</b> {[{friend.nourriture }]}<br>
+                                                                                                    <div class="hr dotted hr-8"></div>
+                                                                                                    <div class="tools action-buttons">
+                                                                                                        <a ng-click="remove(friend.id)">
+                                                                                                            <i class="ace-icon fa fa-trash red bigger-150"></i> Retirer
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div><!-- friend -->
+                                                                        </div> 
+                                                                    </div>
+
+                                                                    <div id="searchFriends" class="modal fade" tabindex="-1">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" id="btn_close_search_friend" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                    <h3 class="smaller lighter blue no-margin">Chercher des amis</h3>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    Veillez saisir le nom de votre ami puis cliquer sur le button "Rechercher"<br>
+
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-12 col-sm-11 col-md-10">
+                                                                                            <div class="input-group">
+                                                                                                <input type="text" class="form-control" ng-model="keyword" name="keywords" placeholder="Look within results">
+                                                                                                <div class="input-group-btn">
+                                                                                                    <button type="button" ng-click="search()" class="btn btn-default no-border btn-sm">
+                                                                                                        <i class="ace-icon fa fa-search icon-on-right bigger-110"></i>
+                                                                                                    </button>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div><br><br>
+                                                                                    <p> {[{ searchFriends.length }]} résultats trouvés  </p><br><br>
+                                                                                    {# <div class="col-md-6">
+                                                                                                                                         <input type="text" class="form-control" ng-model="keyword">
+                                                                                                                                     </div> 
+                                                                                                                                     <div class="col-md-3">
+                                                                                                                                         <button  type="button" ng-click="search()" class="btn btn-success" name="search"> <i class=" fa fa-search bigger-150"></i> Chercher</button>
+                                                                                                                                     </div>#}
+
+
+                                                                                    <div id="search_friends" class="tab-pane active">
+                                                                                        <div class="profile-users clearfix">
+                                                                                            <div class="itemdiv memberdiv" ng-repeat="(key, friend) in searchFriends">
+                                                                                                <div class="inline pos-rel">
+                                                                                                    <div class="user">
+                                                                                                        <a href="#">
+                                                                                                            <img src="../assets/images/avatars/default_user.png" alt="Jim Doe's avatar">
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                    <div class="body">
+                                                                                                        <div class="name">
+                                                                                                            <a href="#">
+                                                                                                                <span class="user-status status-busy"></span>
+                                                                                                                {[{friend.username}]}
+                                                                                                            </a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="popover right">
+                                                                                                        <div class="arrow"></div>
+                                                                                                        <div class="popover-content">
+                                                                                                            <b>Age</b>     {[{friend.age}]}<br>
+                                                                                                            <b>Famille</b> {[{friend.famille }]}<br>
+                                                                                                            <b>Race</b> {[{friend.race}]}<br>
+                                                                                                            <b>Nourriture</b> {[{friend.nourriture }]}<br>
+                                                                                                            <div class="hr dotted hr-8"></div>
+                                                                                                            <div class="tools action-buttons">
+                                                                                                                <a ng-click="add(friend.id)">
+                                                                                                                    <i class="ace-icon fa fa-trash blue bigger-150"></i> Ajouter
+                                                                                                                </a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div><!-- friend -->
+
+
+
+
+                                                                                </div>
+                                                                                <div class="modal-footer">  
+                                                                                    <button data-bb-handler="success"  type="button" ng-click="" class="btn btn-sm btn-success">
+                                                                                        <i class="ace-icon fa fa-check"></i> Terminer</button>
+                                                                                    <button data-bb-handler="danger"  data-dismiss="modal" type="button" class="btn btn-sm btn-danger">
+                                                                                        <i class="ace-icon fa fa-times"  data-bb-handler="cancel"></i>   Annuler</button>
+                                                                                </div>
+                                                                            </div><!-- /.modal-content -->
+                                                                        </div><!-- /.modal-dialog -->
+                                                                    </div>
+                                                                                    
+                                                                  <!-- addFriends -->   
+                                                                    <div id="addFriends" class="modal fade" tabindex="-1">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" id="btn_close_search_friend" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                    <h3 class="smaller lighter blue no-margin">Ajouter des amis</h3>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    Vous pouvez ajouter des nouveaux amis sur votre réseaux<br>
+                                                                                    <p> {[{ users.length }]} utilisateurs inscri  sur l'app  </p><br><br>
+                                                                                    <div id="search_friends" class="tab-pane active">
+                                                                                        <div class="profile-users clearfix">
+                                                                                            <div class="itemdiv memberdiv" ng-repeat="(key, user) in users">
+                                                                                                <div class="inline pos-rel">
+                                                                                                    <div class="user">
+                                                                                                        <a href="#">
+                                                                                                            <img src="../assets/images/avatars/default_user.png" alt="Jim Doe's avatar">
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                    <div class="body">
+                                                                                                        <div class="name">
+                                                                                                            <a href="#">
+                                                                                                                <span class="user-status status-busy"></span>
+                                                                                                                {[{user.username}]}
+                                                                                                            </a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="popover right">
+                                                                                                        <div class="arrow"></div>
+                                                                                                        <div class="popover-content">
+                                                                                                            <b>Age</b>     {[{user.age}]}<br>
+                                                                                                            <b>Famille</b> {[{user.famille }]}<br>
+                                                                                                            <b>Race</b> {[{user.race}]}<br>
+                                                                                                            <b>Nourriture</b> {[{user.nourriture }]}<br>
+                                                                                                            <div class="hr dotted hr-8"></div>
+                                                                                                            <div class="tools action-buttons">
+                                                                                                                <a ng-click="add(user.id)">
+                                                                                                                    <i class="ace-icon fa fa-trash blue bigger-150"></i> Ajouter
+                                                                                                                </a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div><!-- addFriends -->
+
+
+                                                                                </div>
+                                                                                <div class="modal-footer">  
+                                                                                    <button data-bb-handler="success" data-dismiss="modal" type="button" ng-click="" class="btn btn-sm btn-success">
+                                                                                        <i class="ace-icon fa fa-check"></i> Terminer</button>
+                                                                                    <button data-bb-handler="danger"  data-dismiss="modal" type="button" class="btn btn-sm btn-danger">
+                                                                                        <i class="ace-icon fa fa-times"  data-bb-handler="cancel"></i>   Annuler</button>
+                                                                                </div>
+                                                                            </div><!-- /.modal-content -->
+                                                                        </div><!-- /.modal-dialog -->
                                                                     </div>
 
 
-                                                                    <table id="dynamic-table table" class=" table-bordered table table-striped">
-                                                                        <thead>
-                                                                        <th>Username</th>
-                                                                        <th>Age</th>
-                                                                        <th>Famille</th>
-                                                                        <th>Race</th>
-                                                                        <th>Nourriture</th>
-                                                                        <th>Action</th>
-                                                                        </thead>
-                                                                        <tbody ng-repeat="(key, friend) in friends">
-                                                                            <tr>
-                                                                                <td>{[{friend.username}]}</td>
-                                                                                <td>{[{friend.age}]}</td>
-                                                                                <td>{[{friend.famille }]}</td>
-                                                                                <td>{[{friend.race}]}</td>
-                                                                                <td>{[{friend.nourriture }]} </td>
-                                                                                <td><button class="btn btn-danger" ng-click="remove(friend.id)">Remove</button></td>
-                                                                            </tr>
-                                                                            </body>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                            </div><!-- /#home -->
-
-
-
-                                            <div id="friends" class="tab-pane">
-                                                <div class="profile-users clearfix">
-                                                    <div class="itemdiv memberdiv">
-                                                        <div class="inline pos-rel">
-                                                            <div class="user">
-                                                                <a href="#">
-                                                                    <img src="assets/images/avatars/avatar4.png" alt="Bob Doe's avatar" />
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="body">
-                                                                <div class="name">
-                                                                    <a href="#">
-                                                                        <span class="user-status status-online"></span>
-                                                                        Bob Doe
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="popover">
-                                                                <div class="arrow"></div>
-
-                                                                <div class="popover-content">
-                                                                    <div class="bolder">Content Editor</div>
-
-                                                                    <div class="time">
-                                                                        <i class="ace-icon fa fa-clock-o middle bigger-120 orange"></i>
-                                                                        <span class="green"> 20 mins ago </span>
+                                                                    <!-- invit -->
+                                                                    <div id="invit" class="modal fade" tabindex="-1">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" id="btn_close_search_friend" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                    <h3 class="smaller lighter blue no-margin">Inviter des amis</h3>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                 
+                                                                                    <form >
+                                                                                       Vous pouvez inviter un ami pour vous joindre, ecrivez son adresse email puis cliquer sur "Inviter"<br>
+                                                                                  
+                                                                                        <input type="email" class="form-control" ng-model="invitation">
+                                                                                        <br><br>
+                                                                                      </form>
+                                                                                       
+                                                                                </div>
+                                                                                <div class="modal-footer">  
+                                                                                    <button  type="button" ng-click="" class="btn btn-sm btn-success">
+                                                                                        <i class="ace-icon fa fa-envelope-o" ng-click="invit()"></i> Envoyer</button>
+                                                                                    <button data-bb-handler="danger"  data-dismiss="modal" type="button" class="btn btn-sm btn-danger">
+                                                                                        <i class="ace-icon fa fa-times"  data-bb-handler="cancel"></i>   Annuler</button>
+                                                                                </div>
+                                                                            </div><!-- /.modal-content -->
+                                                                        </div><!-- /.modal-dialog -->
                                                                     </div>
 
-                                                                    <div class="hr dotted hr-8"></div>
-
-                                                                    <div class="tools action-buttons">
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                        </a>
-
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                        </a>
-
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itemdiv memberdiv">
-                                                        <div class="inline pos-rel">
-                                                            <div class="user">
-                                                                <a href="#">
-                                                                    <img src="assets/images/avatars/avatar1.png" alt="Rose Doe's avatar" />
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="body">
-                                                                <div class="name">
-                                                                    <a href="#">
-                                                                        <span class="user-status status-offline"></span>
-                                                                        Rose Doe
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="popover">
-                                                                <div class="arrow"></div>
-
-                                                                <div class="popover-content">
-                                                                    <div class="bolder">Graphic Designer</div>
-
-                                                                    <div class="time">
-                                                                        <i class="ace-icon fa fa-clock-o middle bigger-120 grey"></i>
-                                                                        <span class="grey"> 30 min ago </span>
-                                                                    </div>
-
-                                                                    <div class="hr dotted hr-8"></div>
-
-                                                                    <div class="tools action-buttons">
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                        </a>
-
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                        </a>
-
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="itemdiv memberdiv">
-                                                        <div class="inline pos-rel">
-                                                            <div class="user">
-                                                                <a href="#">
-                                                                    <img src="assets/images/avatars/avatar.png" alt="Jim Doe's avatar" />
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="body">
-                                                                <div class="name">
-                                                                    <a href="#">
-                                                                        <span class="user-status status-busy"></span>
-                                                                        Jim Doe
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="popover">
-                                                                <div class="arrow"></div>
-
-                                                                <div class="popover-content">
-                                                                    <div class="bolder">SEO &amp; Advertising</div>
-
-                                                                    <div class="time">
-                                                                        <i class="ace-icon fa fa-clock-o middle bigger-120 red"></i>
-                                                                        <span class="grey"> 1 hour ago </span>
-                                                                    </div>
-
-                                                                    <div class="hr dotted hr-8"></div>
-
-                                                                    <div class="tools action-buttons">
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                        </a>
-
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                        </a>
-
-                                                                        <a href="#">
-                                                                            <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <tbody 
+                                                                    <!-- invit -->
 
 
 
-
-
-                                                <div class="itemdiv memberdiv" >
-                                                    <div class="inline pos-rel">
-                                                        <div class="user">
-                                                            <a href="#">
-                                                                <img src="assets/images/avatars/avatar5.png" alt="Alex Doe's avatar" />
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="body">
-                                                            <div class="name">
-                                                                {#   <a href="#">
-                                                                       <span class="user-status status-idle"></span>
-                                                                       {[{ami.username}]}
-                                                                   </a>
-   
-                                                                   {[{ami.age}]}
-                                                                   {[{ami.famille }]}
-                                                                   {[{ami.race}]}
-                                                                   {[{ami.nourriture }]}
-                                                                   <button class="btn btn-danger" ng-click="retirerAmi(ami.id)">Retirer</button>#}
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="popover">
-                                                            <div class="arrow"></div>
-
-                                                            <div class="popover-content">
-                                                                <div class="bolder">Marketing</div>
-
-                                                                <div class="time">
-                                                                    <i class="ace-icon fa fa-clock-o middle bigger-120 orange"></i>
-                                                                    <span class=""> 40 minutes idle </span>
-                                                                </div>
-
-                                                                <div class="hr dotted hr-8"></div>
-
-                                                                <div class="tools action-buttons">
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-
-                                                <div class="itemdiv memberdiv">
-                                                    <div class="inline pos-rel">
-                                                        <div class="user">
-                                                            <a href="#">
-                                                                <img src="assets/images/avatars/avatar2.png" alt="Phil Doe's avatar" />
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="body">
-                                                            <div class="name">
-                                                                <a href="#">
-                                                                    <span class="user-status status-online"></span>
-                                                                    Phil Doe
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="popover">
-                                                            <div class="arrow"></div>
-
-                                                            <div class="popover-content">
-                                                                <div class="bolder">Public Relations</div>
-
-                                                                <div class="time">
-                                                                    <i class="ace-icon fa fa-clock-o middle bigger-120 orange"></i>
-                                                                    <span class="green"> 2 hours ago </span>
-                                                                </div>
-
-                                                                <div class="hr dotted hr-8"></div>
-
-                                                                <div class="tools action-buttons">
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <div class="itemdiv memberdiv">
-                                                    <div class="inline pos-rel">
-                                                        <div class="user">
-                                                            <a href="#">
-                                                                <img src="assets/images/avatars/avatar3.png" alt="Susan Doe's avatar" />
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="body">
-                                                            <div class="name">
-                                                                <a href="#">
-                                                                    <span class="user-status status-online"></span>
-                                                                    Susan Doe
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="popover">
-                                                            <div class="arrow"></div>
-
-                                                            <div class="popover-content">
-                                                                <div class="bolder">HR Management</div>
-
-                                                                <div class="time">
-                                                                    <i class="ace-icon fa fa-clock-o middle bigger-120 orange"></i>
-                                                                    <span class="green"> 20 mins ago </span>
-                                                                </div>
-
-                                                                <div class="hr dotted hr-8"></div>
-
-                                                                <div class="tools action-buttons">
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="itemdiv memberdiv">
-                                                    <div class="inline pos-rel">
-                                                        <div class="user">
-                                                            <a href="#">
-                                                                <img src="assets/images/avatars/avatar1.png" alt="Jennifer Doe's avatar" />
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="body">
-                                                            <div class="name">
-                                                                <a href="#">
-                                                                    <span class="user-status status-offline"></span>
-                                                                    Jennifer Doe
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="popover">
-                                                            <div class="arrow"></div>
-
-                                                            <div class="popover-content">
-                                                                <div class="bolder">Graphic Designer</div>
-
-                                                                <div class="time">
-                                                                    <i class="ace-icon fa fa-clock-o middle bigger-120 grey"></i>
-                                                                    <span class="grey"> 2 hours ago </span>
-                                                                </div>
-
-                                                                <div class="hr dotted hr-8"></div>
-
-                                                                <div class="tools action-buttons">
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="itemdiv memberdiv">
-                                                    <div class="inline pos-rel">
-                                                        <div class="user">
-                                                            <a href="#">
-                                                                <img src="assets/images/avatars/avatar3.png" alt="Alexa Doe's avatar" />
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="body">
-                                                            <div class="name">
-                                                                <a href="#">
-                                                                    <span class="user-status status-offline"></span>
-                                                                    Alexa Doe
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="popover">
-                                                            <div class="arrow"></div>
-
-                                                            <div class="popover-content">
-                                                                <div class="bolder">Accounting</div>
-
-                                                                <div class="time">
-                                                                    <i class="ace-icon fa fa-clock-o middle bigger-120 grey"></i>
-                                                                    <span class="grey"> 4 hours ago </span>
-                                                                </div>
-
-                                                                <div class="hr dotted hr-8"></div>
-
-                                                                <div class="tools action-buttons">
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-facebook-square blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                                                                    </a>
-
-                                                                    <a href="#">
-                                                                        <i class="ace-icon fa fa-google-plus-square red bigger-150"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </div><!-- /#home -->
                                             <div class="hr hr10 hr-double"></div>
                                         </div><!-- /#friends -->
                                     </div>
@@ -672,7 +486,6 @@
                         <span class="blue bolder">Appartoo</span>
                         Application &copy; 2018
                     </span>
-
                     &nbsp; &nbsp;
                     <span class="action-buttons">
                         <a href="#">
@@ -699,7 +512,7 @@
     <!-- basic scripts -->
 
     <!--[if !IE]> -->
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="{{asset('assets/js/jquery-2.1.4.min.js')}}"></script>
 
     <!-- <![endif]-->
 
@@ -710,7 +523,7 @@
                     if ('ontouchstart' in document.documentElement)
                         document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
     </script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 
     <!-- page specific plugin scripts -->
 
@@ -765,14 +578,14 @@
                         };
 
 
-                        $scope.add = function ()
+                        $scope.add = function (id)
                         {
                             var url = "{{path('marsupilami_add')}}";
                             var postaction = $resource(url, null,
                                     {
                                         'post': {method: 'POST'}
                                     });
-                            postaction.post(null, {'id': $scope.new},
+                            postaction.post(null, {'id': id},
                             function (data) {
                                 $scope.init();
                             },
@@ -796,6 +609,44 @@
                                     function (error) {
                                     });
                             $scope.chargment = false;
+                        };
+
+
+                        $scope.search = function (keyword)
+                        {
+                            var url = "{{path('marsupilami_search')}}";
+                            var postaction = $resource(url, null,
+                                    {
+                                        'get': {method: 'GET', params: '$scope.keyword'}
+                                    });
+                            postaction.get({'keyword': $scope.keyword},
+                            function (data) {
+                                console.log(data);
+
+                                if (data.users)
+                                    $scope.searchFriends = data.users;
+                                $scope.init();
+                            },
+                                    function (error) {
+                                    });
+                        };
+
+
+                        $scope.invit = function ()
+                        {
+                            var url = "{{path('marsupilami_invit')}}";
+                            var postaction = $resource(url, null,
+                                    {
+                                        'post': {method: 'POST'}
+                                    });
+                            postaction.post(null, {'email': $scope.invitation},
+                            function (data) {
+                                console.log(data);
+                                $("#btn_close_search_friend").click();
+                                $scope.init();
+                            },
+                                    function (error) {
+                                    });
                         };
 
                     });

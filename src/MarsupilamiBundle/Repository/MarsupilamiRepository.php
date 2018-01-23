@@ -32,5 +32,17 @@ class MarsupilamiRepository extends \Doctrine\ORM\EntityRepository {
                         ->getQuery()
                         ->getResult(Query::HYDRATE_ARRAY);
     }
+    
+    public function search($keyword) {
+        return $this->getEntityManager()
+                        ->createQueryBuilder()
+                        ->select('u')
+                        ->from('MarsupilamiBundle:Marsupilami', 'u')
+                        ->where("u.username LIKE :keyword ")//OR u.race LIKE :keyword OR u.famille LIKE :keyword")
+                        ->setParameter('keyword', '%' . $keyword . '%') 
+                        ->orderBy('u.username', 'DESC')
+                        ->getQuery()
+                        ->getResult(Query::HYDRATE_ARRAY);
+    }
 
 }
