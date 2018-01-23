@@ -1,0 +1,15 @@
+marsupilami_homepage:
+    path:     /
+    defaults: { _controller: MarsupilamiBundle:FrontEnd:index }
+    
+marsupilami_list:
+    path:     /list
+    defaults: { _controller: MarsupilamiBundle:Marsupilami:list }
+    
+marsupilami_add:
+    path:     /add
+    defaults: { _controller: MarsupilamiBundle:Marsupilami:add }
+    
+marsupilami_remove:
+    path:     /remove
+    defaults: { _controller: MarsupilamiBundle:Marsupilami:remove }
