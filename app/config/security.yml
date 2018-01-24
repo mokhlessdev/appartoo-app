@@ -21,6 +21,10 @@ security:
             anonymous:    true
             form_login:
                 default_target_path: /amis
+                target_path_parameter: /amis
+                always_use_default_target_path: true
+                use_referer: true
+                default_target_path: default_security_target
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
