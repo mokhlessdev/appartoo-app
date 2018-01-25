@@ -76,12 +76,19 @@ fos_user:
     from_email:
         address:      qqqq@gmail.com
         sender_name:    vvvv
+#    registration:
+#        form:
+#            type: MarsupilamiBundle\Form\RegistrationType
+
+fos_user:
+    firewall_name: api  
+    user_class: MarsupilamiBundle\Entity\Marsupilami
     registration:
         form:
-            type: UserBundle\Form\RegistrationType
+             type: acme_user_registration
     profile:
         form:
-            type: AppBundle\Form\ProfileType
+            type: MarsupilamiBundle\Form\ProfileType
 
 pugx_multi_user:
   users:
@@ -99,3 +106,31 @@ pugx_multi_user:
             type: MarsupilamiBundle\Form\ProfileType
             name: enit_userbundle_profile
             validation_groups:  [Profile, Default]
+            
+nelmio_api_doc:
+    documentation:
+        info:
+            title: My Awesome App!
+
+fos_rest:
+    routing_loader:
+        default_format: json                            # All responses should be JSON formated
+        include_format: false                           # We do not include format in request, so that all responses
+                                                        # will eventually be JSON formated
+
+#fos_user:
+#    db_driver: orm
+#    firewall_name: api                                  # Seems to be used when registering user/reseting password,
+#                                                        # but since there is no "login", as so it seems to be useless in
+#                                                        # our particular context, but still required by "FOSUserBundle"
+#    user_class: Acme\ApiBundle\Entity\User
+
+fos_oauth_server:
+    db_driver:           orm
+    client_class:        MarsupilamiBundle\Entity\Client
+    access_token_class:  MarsupilamiBundle\Entity\AccessToken
+    refresh_token_class: MarsupilamiBundle\Entity\RefreshToken
+    auth_code_class:     MarsupilamiBundle\Entity\AuthCode
+    service:
+         user_provider: fos_user.user_provider
+#        user_provider: fos_user.user_manager             # This property will be used when valid credentials are given to load the user upon access token creation            

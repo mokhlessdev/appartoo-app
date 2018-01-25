@@ -1,31 +1,38 @@
 <?php
-
-
+//Acme\WebBundle\Form\Type\RegistrationFormType.php
 namespace MarsupilamiBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class RegistrationType extends AbstractType {
+class RegistrationType extends AbstractType
+{
 
-    public function buildForm(FormBuilderInterface $builder, array $options) {
+    private $class;
+   public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder->add('age')
                 ->add('famille')
                 ->add('nourriture')
                 ->add('race')
         ;
     }
-
-    public function getParent() {
-        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
+ 
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'intention'  => 'registration',
+            'csrf_protection' => false, //this line does the trick ;)
+        ));
     }
 
-    public function getBlockPrefix() {
-        return 'app_user_registration';
+    public function getParent()
+    {
+      return 'FOS\UserBundle\Form\Type\RegistrationFormType';
     }
 
-    public function getName() {
-        return $this->getBlockPrefix();
+    public function getName()
+    {
+        return 'acme_user_registration';
     }
-
 }
